@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryBackground"
+    tools:context=".WelcomePage">
+
+    <TextView
+        android:id="@+id/text_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to"
+        app:layout_constraintStart_toStartOf="@id/text_geohunt"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="50dp"
+        android:textSize="@dimen/text_medium"
+        android:textColor="@color/colorPrimaryDark"
+        />
+
+
+    <TextView
+        android:id="@+id/text_geohunt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GeoHunt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_welcome"
+        android:layout_marginTop="10dp"
+        android:textSize="@dimen/text_huge"
+        android:textStyle="italic"
+        android:textColor="@color/colorPrimaryDark"/>
+
+
+    <Button
+        android:id="@+id/btnCreateGame"
+        android:text="Create Game"
+        style="@style/DarkPrimaryColoredButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/btnPlayGame"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:onClick="onClickCreateButton"
+        />
+
+    <Button
+        android:id="@+id/btnPlayGame"
+        android:text="Play game"
+        style="@style/DarkPrimaryColoredButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="50dp"
+        android:onClick="onClickPlayButton"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
