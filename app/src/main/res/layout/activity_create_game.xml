@@ -49,6 +49,17 @@
         android:onClick="onClickAddLocation"
         />
 
+    <!-- TODO make the height fill the screen after all of the other items are added -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scrollbars="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addLocationBtn"
+        android:layout_marginTop="15dp"
+        android:id="@+id/locationsRecyclerView"
+        />
+
     <Button
         android:id="@+id/createGameBtn"
         style="@style/DarkPrimaryColoredButton"
@@ -56,7 +67,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/addLocationBtn"
+        app:layout_constraintTop_toBottomOf="@id/locationsRecyclerView"
         android:text="Add Game!"
         android:onClick="onClickAddGame"
         />
