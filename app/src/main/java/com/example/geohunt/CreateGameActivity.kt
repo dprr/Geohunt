@@ -49,6 +49,7 @@ class CreateGameActivity : AppCompatActivity() {
 				val returnLocation = data!!.getParcelableExtra<Location>("CORD")!!
 				locations.add(returnLocation)
 				Toast.makeText(this, "Location added", Toast.LENGTH_SHORT).show()
+				locationsRecyclerView.adapter!!.notifyItemInserted(locations.size - 1)
 			}
 		}
 	}

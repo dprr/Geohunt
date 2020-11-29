@@ -5,11 +5,13 @@ import android.os.Parcelable
 
 data class Location(
 	var Latitude: Double,
-	var Longitude: Double
+	var Longitude: Double,
+	var Description: String
 ) : Parcelable {
 	constructor(parcel: Parcel) : this(
 		parcel.readDouble(),
-		parcel.readDouble()
+		parcel.readDouble(),
+		parcel.readString()!!
 	) {
 	}
 
@@ -20,6 +22,7 @@ data class Location(
 	override fun writeToParcel(parcel: Parcel, flags: Int) {
 		parcel.writeDouble(Latitude)
 		parcel.writeDouble(Longitude)
+		parcel.writeString(Description)
 	}
 
 	companion object CREATOR : Parcelable.Creator<Location> {
